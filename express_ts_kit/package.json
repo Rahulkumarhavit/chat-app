@@ -4,10 +4,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node init && node dist/index.js",
     "watch": "tsc -w",
     "server": "nodemon dist/index.js",
-    "dev": "concurrently \"npm run watch\" \"npm run server\""
+    "dev": "node init && concurrently \"npm run watch\" \"npm run server\""
   },
   "keywords": [],
   "author": "",
@@ -28,6 +28,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "prisma": "^5.21.1"
+    "prisma": "^5.21.1",
+    "socket.io": "^4.8.1"
   }
 }
